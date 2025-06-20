@@ -17,6 +17,8 @@ def activate_virtualenv():
 
 def install_dependencies():
     if os.path.exists('venv'):
+        print("Upgrading pip and installing dependencies...")
+        subprocess.run(['python3', '-m', 'pip', 'install', '--upgrade', 'pip'])
         subprocess.run(['venv/bin/pip', 'install', '-r', 'requirements.txt'])
         print("Dependencies installed.")
     else:
