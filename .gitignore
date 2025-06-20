@@ -1,1 +1,13 @@
+
+*.egg-info
+__pycache__/
+*.pyo
+*.pyc
+*.pyd
+*.pdb
+*.so
+*.swp
+*.log
+*.bak
+*.tmp
 venv/
