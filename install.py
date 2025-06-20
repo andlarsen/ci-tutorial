@@ -7,14 +7,7 @@ def create_virtualenv():
         print("Virtual environment created.")
     else:
         print("Virtual environment already exists.")
-
-def activate_virtualenv():
-    if os.path.exists('venv'):
-        subprocess.run(['.', 'venv', 'bin', 'activate'], shell=True)
-        print("Virtual environment activated.")
-    else:
-        print("Virtual environment does not exist. Please create it first.")
-
+        
 def install_dependencies():
     if os.path.exists('venv'):
         print("Upgrading pip and installing dependencies...")
@@ -34,10 +27,9 @@ def install_project():
 
 def main():
     create_virtualenv()
-    activate_virtualenv()
     install_dependencies()
     install_project()
+    print("Setup complete.")
 
 if __name__ == "__main__":
     main()
-    print("Setup complete.")
